@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+	<context:annotation-config/>
+	<bean id="hello" class="com.cg.bean.HelloWorld" scope="prototype">
+	
+		<property name="name" value="balraj"></property>
+		<property name="language">
+			<list>
+				<value>Hindi</value>
+				<value>English</value>
+				<value>Sanskrit</value>
+			</list>
+		</property>
+		<!-- constructor-arg name="name" value="balraj"></constructor-arg-->
+	</bean>
+	
+	<bean id="e" class="com.cg.bean.Employee">
+		<property name="empid" value="101"></property>
+		<property name="name" value="balraj"></property>
+<!-- 		<constructor-arg name="address" ref="add"></constructor-arg> -->
+		
+	
+	</bean>
+	
+	<bean id="add" class="com.cg.bean.Address">
+		<property name="city" value="noida"></property>
+		<property name="country" value="india"></property>
+		<property name="zip" value="201306"></property>
+	</bean>
+</beans>
